@@ -1,0 +1,27 @@
+<section class="login">
+	<div class="login__box">
+		<div class="login__logo">
+			<img src="/img/admin-logo.png" alt="logo">
+		</div>
+		<div class="login__wrap-inp">
+			<i class="icon icon_contacts"></i><input placeholder="Логин" id="login" type="text">
+		</div>
+		<div class="login__wrap-inp">
+			<i class="icon icon_lock"></i><input placeholder="Пароль" id="password" type="password">
+		</div>
+		<button class="login__btn" id="submit">Войти</button>
+	</div>
+</section>
+<script>
+	$("#submit").on("click",function(){
+		let toServer = { login: $("#login").val(), password: $("#password").val() }
+		$.post("/admin/login",toServer)
+		 .done(function( data ) {
+		 	if(data == true){
+		 		window.location = "/admin";
+		 	}
+		  console.log( data );
+		});
+		 
+	});
+</script>

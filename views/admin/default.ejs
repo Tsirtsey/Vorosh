@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Admin</title>
+	<link rel="stylesheet" href="/css/admin.css">
+	<script src="/js/lib/jQuery v3.5.1.js"></script>
+	<script src="/js/admin.js"></script>
+</head>
+<body>
+	<% if(page.auth){ %>
+		<%- include('./templates/login') %>
+	<% }else{ %>
+	<section class="header">
+		<div class="header__my-site">
+			<img src="/img/admin-logo.png" alt="logo">
+		</div>
+		<div class="header__title">
+			Админ панель
+		</div>
+		<div class="header__exit">
+			<a href="/">Выход</a>
+		</div>
+	</section>
+	<section class="sidebar">
+		<ul class="sidebar__list">
+			<li class="active">
+				<a href="/admin"><i class="icon icon_home"></i>Главная</a> 
+				<i class="icon icon_downarrow drop--btn" data-drop-id="323"></i>
+			</li>
+			<ul class="drop--list" data-drop-id="323" style="display: none;">
+				<li><a href="#">Статистика</a></li>
+				<li><a href="#">Пользователи</a></li>
+				<li><a href="#">Финансы</a></li>
+			</ul>
+			<li><a href="#"><i class="icon icon_info"></i>Статистика</a></li>
+			<li>
+				<a href="/admin/users"><i class="icon icon_contacts"></i>Пользователи</a>
+				<i class="icon icon_downarrow drop--btn" data-drop-id="321"></i>
+			</li>
+			<ul class="drop--list" data-drop-id="321" style="display: none;">
+				<li><a href="#">Права</a></li>
+			</ul>
+			<li><a href="#"><i class="icon icon_backpack"></i>Финансы</a></li>
+			<li><a href="#"><i class="icon icon_settings"></i>Настройки</a></li>
+		</ul>
+	</section>
+	<section class="main">
+		<%- include('./templates/'+page.link) %>
+	</section>
+	<% } %>
+</body>
+</html>

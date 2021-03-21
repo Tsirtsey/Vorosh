@@ -1,0 +1,89 @@
+*{
+	padding: 0;
+	margin: 0;
+	outline: none;
+	box-sizing: border-box;
+	scrollbar-color: var(--color-block) var(--color-1);
+	scrollbar-width: thin;
+	scroll-behavior: smooth;
+	*::-webkit-scrollbar {
+	  width: 10px;
+	  height: 10px;
+	}
+	&::-webkit-scrollbar-track {
+	  background: var(--color-1);
+	}
+	&::-webkit-scrollbar-thumb {
+	  background: var(--color-block); 
+	}
+	&::-webkit-scrollbar-thumb:hover {
+	  background: var(--color-accent-4); 
+	}
+}
+
+	
+:root{
+	--mainFont:"Roboto";
+
+	--color-1: #313131;
+	--color-2: #3f4049;
+	--color-3: #ffffff;
+
+	--color-accent-1: #fc5f45;/*красный*/
+	--color-accent-2: #38c695;/*зеленый*/
+	--color-accent-3: #b27cf5;/*фелюлетовый*/
+	--color-accent-4: #feb960;/*оранжевый*/
+
+	--color-block: #f7f7f7;/*цвет блоков*/
+
+}
+@font-face {
+ 	font-family: "Roboto";
+ 	src: url("/fonts/Roboto-Light.ttf");
+ 	font-weight: 300;
+}
+@font-face {
+ 	font-family: "Roboto";
+ 	src: url("/fonts/Roboto-Thin.ttf");
+ 	font-weight: 100;
+}
+@font-face {
+ 	font-family: "Roboto";
+ 	src: url("/fonts/Roboto-Bold.ttf");
+ 	font-weight: 700;
+}
+@font-face {
+ 	font-family: "Roboto";
+ 	src: url("/fonts/Roboto-Regular.ttf");
+ 	font-weight: 400;
+}
+
+html{
+	font-size: 8px;
+}
+
+body{
+	background-color: var(--color-2);
+	color: var(--color-1);
+	font-family: var(--mainFont);
+}
+
+a{
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	text-decoration: none;
+}
+
+ul,ol{
+	list-style-type: none;
+}
+
+.container{
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+@import 'blocks/header';

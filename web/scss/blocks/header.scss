@@ -1,0 +1,75 @@
+.header{
+	--header-height: 50px;
+	height: var(--header-height);
+	width: 100%;
+	position: relative;
+	&__fixed{
+		height: var(--header-height);
+		width: 100%;
+		background-color: var(--color-3);
+		border-bottom: 2px solid var(--color-accent-4);
+		position: fixed;
+	}
+	&__container{
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+	&__logo{
+		padding: 5px 10px;
+		transition: background ease .1s;
+		display: flex;
+		align-items: center;
+		&-img{
+			width: 4rem;
+		    height: 4rem;
+		    margin-right: 1.4rem;
+		    object-fit: contain;
+		}
+
+		&-text{
+    		color: var(--color-1);
+    		font-size: 1.5rem;
+		    font-weight: 700;
+		    line-height: 1.2;
+    		display: flex;
+		    align-items: center;
+		}
+
+		&:hover{
+			background-color: var(--color-block);
+		}
+	}
+
+	&__nav{
+		display: flex;
+    	align-items: center;
+		&-list{
+		    height: 100%;
+		    font-size: 1.4rem;
+		    font-weight: 700;
+			display: flex;
+		    align-items: center;
+		}
+
+		&-item{
+			height: 100%;
+			margin: 0 2px;
+		}
+
+		&-link{
+			height: 100%;
+			padding: 10px;
+		    transition: background ease .1s;
+		    display: flex;
+		    align-items: center;
+		    &:hover{
+		   	 	background: var(--color-block);
+		    }
+		}
+
+	}
+
+}

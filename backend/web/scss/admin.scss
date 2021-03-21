@@ -1,0 +1,46 @@
+*{
+	padding: 0;
+	margin: 0;
+	outline: none;
+	box-sizing: border-box;
+	font-family: var(--firstFontRegular);
+	font-size: 14px;
+}
+:root{
+	--header-height: 50px;
+
+	--firstFontBold:"Montserrat-Bold";
+	--firstFontExtraLight:"Montserrat-ExtraLight";
+	--firstFontRegular:"Montserrat-Regular";
+}
+@font-face {
+ 	font-family: "Montserrat-Bold";
+ 	src: url("/fonts/Montserrat-Bold.ttf");
+}
+@font-face {
+ 	font-family: "Montserrat-LightItalic";
+ 	src: url("/fonts/Montserrat-LightItalic.ttf");
+}
+@font-face {
+ 	font-family: "Montserrat-Regular";
+ 	src: url("/fonts/Montserrat-Regular.ttf");
+}
+body{
+	display: grid;
+    grid-template-columns: 275px 1fr;
+}
+a{
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	text-decoration: none;
+}
+ul,ol{
+	list-style-type: none;
+}
+@import './blocks/login';
+@import './blocks/icon';
+@import './blocks/header';
+@import './blocks/sidebar';
+@import './blocks/main';
+@import './blocks/table-users';

@@ -1,0 +1,35 @@
+{
+  "name": "vorosh",
+  "version": "1.0.0",
+  "description": "Project for making money on the Internet",
+  "main": "./backend/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "start-gulp": "gulp sass:watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tsirtsey/Vorosh.git"
+  },
+  "author": "viliniw,Tsirtsey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tsirtsey/issues"
+  },
+  "homepage": "https://github.com/Tsirtsey/Vorosh#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "cookie-session": "^1.4.0",
+    "crypto": "^1.0.1",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-partials": "^0.3.0",
+    "mysql2": "^2.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "nodemon": "^2.0.6"
+  }
+}

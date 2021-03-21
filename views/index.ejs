@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="/css/index.css">
+	<% if (page.css){ %>
+		<% for (var i = 0; i < page.css.length; i++){ %>
+			<link rel="stylesheet" href="<%= css[i] %>">
+		<% } %>
+	<% } %>
+	<script src="/js/lib/jQuery v3.5.1.js"></script>
+</head>
+<body>
+	<%- include('./layouts/header') %>
+	<%- include('./'+ page.link) %>
+	<%- include('./layouts/footer') %>
+
+	<script src="/js/index.js"></script>
+	<% if (page.js){ %>
+		<% for (var i = 0; i < page.js.length; i++){ %>
+			<script src="<%= page.js[i] %>"></script>
+		<% } %>
+	<% } %>
+</body>
+</html>

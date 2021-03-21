@@ -1,0 +1,54 @@
+.login{
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(/img/admin-login-bg.jpg) no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	&__box{
+		background-color: #fff;
+	    width: 400px;
+	    height: 390px;
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    padding-top: 40px;
+	    padding-bottom: 70px;
+	}
+	&__logo{
+		margin-bottom: 30px;
+	}
+	&__wrap-inp{
+		width: 310px;
+    	margin-bottom: 20px;
+    	position: relative;
+    	&>.icon{
+    		position: absolute;
+    		top: 50%;
+		    transform: translateY(-50%);
+		    left: 13px;
+    	}
+    	&>input{
+    		font-size: 19px;
+    		width: 100%;
+    		height: 40px;
+    		padding: 0 20px 0 50px;
+    	}
+	}
+	&__btn{
+    	margin-top: auto;
+    	border: none;
+	    background-color: #0787f0;
+	    width: 310px;
+	    height: 35px;
+	    font-size: 18px;
+	    border-radius: 5px;
+	    text-transform: lowercase;
+	    color: #fff;
+	    cursor: pointer;
+	    &:hover{
+	    	transform: scale(1.02);
+	    }
+	}
+}

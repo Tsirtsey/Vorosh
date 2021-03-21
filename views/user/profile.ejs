@@ -1,0 +1,49 @@
+<div class="">Айди пользователя: <%= user.id %></div>
+<div class="">Имя: <%= user.name %></div>
+<img src="/img/uploads/avatars/<%= user.avatar %>" alt="avatar">
+<div class="">Описание: <%= user.description %></div>
+<br>
+<br>
+<br>
+<!-- <form id="formChangeUserInfo" action="" method="post" enctype="multipart/form-data"> -->
+	<input id="user-avatar" type="file" name="userAvatar"><br>
+	<button id="user-avatar__btn">Обновить</button><br>
+	<input id="user-name" type="text" name="userName"><br>
+	<textarea id="user-description" name="userDescription" cols="30" rows="10"></textarea><br>
+	<button id="user-info__btn">Обновить</button>
+<!-- </form> -->
+<script>
+	$("#user-avatar__btn").on("click",function(e){
+		let user_avatar = $("#user-avatar");
+		let file = new FormData();
+		file.append("userAvatar",user_avatar.get(0).files[0])
+
+		jQuery.ajax({
+		    url: '/user/change-user-avatar',
+		    data: file,
+		    cache: false,
+		    contentType: false,
+		    processData: false,
+		    method: 'POST',
+		    success: function(data){
+		    	console.log("пришло");
+		        alert(data);
+		    }
+		});
+	});
+	$("#user-info__btn").on("click",function(e){
+		let user_name = $("#user-name");
+		let user_description = $("#user-description");
+		let toServer = {
+			name: user_name.val(),
+			description: user_description.val()
+		};
+		$.post( "/user/change-user-info",toServer)
+		 .done(function( data ) {
+		 	if(data == "ok"){
+		 		window.location.reload();
+		 	}
+		  console.log( data );
+		});
+	});
+</script>
