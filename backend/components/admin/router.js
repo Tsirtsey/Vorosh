@@ -12,7 +12,6 @@ router.get('/login',(req,res)=>{
 	ControllerAdmin.actionGetLogin(req,res);
 });
 
-
 router.post('/login',(req,res)=>{
 	ControllerAdmin.actionPostLogin(req,res);
 });

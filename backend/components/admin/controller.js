@@ -1,11 +1,11 @@
 const defineRole	= require("./defineRole.js");
-const login	= require("./login.js");
+const login			= require("./login.js");
 
 module.exports = {
 
-	actionGetIndex: (req,res)=>{
-		defineRole(req.session,(role)=>{
-			if(role == "admin"){
+	actionGetIndex: (req,res) => {
+		defineRole(req.session,(role) => {
+			if(role === "admin"){
 				res.render("admin/default",{
 					page: { link: "index" }
 				}); 
@@ -15,7 +15,7 @@ module.exports = {
 		});
 	},
 
-	actionGetLogin: (req,res)=>{
+	actionGetLogin: (req,res) => {
 		res.render("admin/default",{
 			page:{
 				auth: true
@@ -23,7 +23,7 @@ module.exports = {
 		});
 	},
 
-	actionPostLogin: (req,res)=>{
+	actionPostLogin: (req,res) => {
 		login(req,res);
 	}
 	

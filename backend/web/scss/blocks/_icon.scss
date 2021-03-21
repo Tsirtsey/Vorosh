@@ -5,31 +5,16 @@
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
-	&_home{
-		background-image: url("/img/icons/icons8-главная-50.png");
+	&_news{
+		background-image: url("/img/icons/icons8-us-news-50.png");
+	}
+	&_feedback{
+		background-image: url("/img/icons/icons8-group-message-50.png");
 	}
 	&_info{
 		background-image: url("/img/icons/icons8-информация-50.png");
 	}
-	&_contacts{
-		background-image: url("/img/icons/icons8-контакты-50.png");
-	}
-	&_settings{
-		background-image: url("/img/icons/icons8-настройки-50.png");
-	}
-	&_backpack{
-		background-image: url("/img/icons/icons8-портфель-50.png");
-	}
-	&_synchronize{
-		background-image: url("/img/icons/icons8-синхронизировать-50.png");
-	}
-	&_cancellation{
-		background-image: url("/img/icons/icons8-отмена-50.png");
-	}
 	&_downarrow{
 		background-image: url("/img/icons/icons8-шеврон-вниз-50.png");
-	}
-	&_lock{
-		background-image: url("/img/icons/icons8-замок-50.png");
 	}
 }
