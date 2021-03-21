@@ -1,7 +1,5 @@
 const express = require("express");
 const ControllerAdmin = require("./controller.js");
-
-
 const router = express.Router();
 
 router.get('/',(req,res)=>{

@@ -1,7 +1,5 @@
 const express = require("express");
 const ControllerIndex = require("./controller.js");
-
-
 const router = express.Router();
 
 router.get("/",function(req,res){
