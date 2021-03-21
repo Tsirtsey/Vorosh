@@ -30,6 +30,7 @@ config.static_dir.forEach((path)=>{
 
 
 app.use('/admin',routers.admin);
+app.use('/news',routers.news);
 app.use('/',routers.index);
 
 app.listen(config.port);
