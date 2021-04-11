@@ -1,18 +1,37 @@
 const defineRole	= require("./defineRole.js");
 const login			= require("./login.js");
+const parseNews		= require("./parseNews.js");
+
+function isAdmin(req, callback){
+	defineRole(req.session,(role) => {
+		if(role === "admin"){
+			callback();
+		}else{
+			res.redirect('/');
+		}
+	});
+}
 
 module.exports = {
 
 	actionGetIndex: (req,res) => {
-		defineRole(req.session,(role) => {
-			if(role === "admin"){
-				res.render("admin/default",{
-					page: { link: "index" }
-				}); 
-			}else{
-				res.redirect('/');
-			}
-		});
+		isAdmin(req,()=>{
+			res.render("admin/default",{
+				page: { link: "index" }
+			}); 
+		})
+	},
+
+	actionGetNews: (req,res) => {
+		isAdmin(req,()=>{
+			res.render("admin/default",{
+				page: { link: "news" }
+			}); 
+		})
+	},
+
+	actionPostNews: (req,res) => {
+		parseNews(req,res);
 	},
 
 	actionGetLogin: (req,res) => {

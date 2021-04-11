@@ -6,6 +6,14 @@ router.get('/',(req,res)=>{
 	ControllerAdmin.actionGetIndex(req,res);
 });
 
+router.get('/news',(req,res)=>{
+	ControllerAdmin.actionGetNews(req,res);
+});
+
+router.post('/news',(req,res)=>{
+	ControllerAdmin.actionPostNews(req,res);
+});
+
 router.get('/login',(req,res)=>{
 	ControllerAdmin.actionGetLogin(req,res);
 });
