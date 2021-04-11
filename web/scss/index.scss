@@ -21,13 +21,85 @@
 	}
 }
 
-	
+.index{
+	&__block{
+		width: 800px;
+		height: 937px;
+		left: 320px;
+		top: 192px;
+		&-page{
+			margin-top: 20px;
+			margin-left: 76%;
+		}
+		&-1{
+			margin-left: 33%;
+			margin-top: 20px;
+			width: 800px;
+			height: 250px;
+			left: 320px;
+			top: 192px;
+
+			background: #FFFFFF;
+			border-radius: 15px;
+			display: flex;
+
+			&-img{
+				margin-left: 13px;
+				margin-block: 13px;
+				height: 90%;
+			}
+			&-h1{
+				margin-left: 10px;
+				margin-top: 10px;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 18px;
+				line-height: 22px;
+				text-transform: uppercase;
+
+				color: #000000;
+			}
+			&-h2{
+				margin-left: 10px;
+				margin-right: 10px;
+				margin-top: 5px;
+				font-style: normal;
+				font-weight: 300;
+				font-size: 12px;
+				line-height: 18px;
+				color: #000000;
+			}
+		}
+		&-2{
+			margin-left: 33%;
+			margin-top: 20px;
+			width: 800px;
+			height: 250px;
+			left: 320px;
+			top: 192px;
+
+			background: #FFFFFF;
+			border-radius: 15px;
+		}
+		&-3{
+			margin-left: 33%;
+			margin-top: 20px;
+			width: 800px;
+			height: 250px;
+			left: 320px;
+			top: 192px;
+
+			background: #FFFFFF;
+			border-radius: 15px;
+		}
+	}
+}
 :root{
 	--mainFont:"Roboto";
 
-	--color-1: #313131;
-	--color-2: #3f4049;
-	--color-3: #ffffff;
+	--color-1: #ffffff;
+	--color-2: #A7C0E9;
+	--color-3: #01123C;
 
 	--color-accent-1: #fc5f45;/*красный*/
 	--color-accent-2: #38c695;/*зеленый*/
@@ -37,6 +109,7 @@
 	--color-block: #f7f7f7;/*цвет блоков*/
 
 }
+
 @font-face {
  	font-family: "Roboto";
  	src: url("/fonts/Roboto-Light.ttf");
@@ -87,3 +160,4 @@ ul,ol{
 }
 
 @import 'blocks/header';
+@import "blocks/footer";

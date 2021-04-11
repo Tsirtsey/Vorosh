@@ -1,5 +1,5 @@
 .header{
-	--header-height: 50px;
+	--header-height: 100px;
 	height: var(--header-height);
 	width: 100%;
 	position: relative;
@@ -7,7 +7,6 @@
 		height: var(--header-height);
 		width: 100%;
 		background-color: var(--color-3);
-		border-bottom: 2px solid var(--color-accent-4);
 		position: fixed;
 	}
 	&__container{
@@ -23,23 +22,19 @@
 		display: flex;
 		align-items: center;
 		&-img{
-			width: 4rem;
-		    height: 4rem;
+			width: 84px;
+		    height: 72px;
 		    margin-right: 1.4rem;
 		    object-fit: contain;
 		}
 
 		&-text{
     		color: var(--color-1);
-    		font-size: 1.5rem;
-		    font-weight: 700;
-		    line-height: 1.2;
+			font-size: 18px;
+			font-weight: normal;
+			line-height: 22px;
     		display: flex;
 		    align-items: center;
-		}
-
-		&:hover{
-			background-color: var(--color-block);
 		}
 	}
 
@@ -48,7 +43,7 @@
     	align-items: center;
 		&-list{
 		    height: 100%;
-		    font-size: 1.4rem;
+			font-size: 14px;
 		    font-weight: 700;
 			display: flex;
 		    align-items: center;
@@ -65,9 +60,6 @@
 		    transition: background ease .1s;
 		    display: flex;
 		    align-items: center;
-		    &:hover{
-		   	 	background: var(--color-block);
-		    }
 		}
 
 	}
