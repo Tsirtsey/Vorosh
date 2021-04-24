@@ -1,13 +1,16 @@
 const express 			= require("express");
+const Addiction 		= require("./Addiction.js");
 
 module.exports ={
 
 	actionGetIndex: (req,res) => {
-		res.render("index",{
-	    	page:{
-	    		link:"layouts/main"
-	    	}
-	    });
+		Addiction.DB.query("SELECT * FROM `news`;",(err, response, meta)=>{
+			res.render("index",{
+		    	page:{
+		    		link:"layouts/main", news: response
+		    	}
+		    });
+		})
 	},
 
 	actionGetIndexOther: (req,res) => {

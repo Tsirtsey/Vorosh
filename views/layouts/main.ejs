@@ -1,7 +1,17 @@
 
 <index class="index">
     <div class="index__block">
-        <div class="index__block-1">
+        <% if(page.news){ %>
+          <%  for(let i = 0; i < page.news.length; i++){ %>
+            <div class="index__block-1">
+               <img class="index__block-1-img" src="<%= page.news[i].img %>">
+               <div class=index__block-1-text>
+               <%- page.news[i].text %>
+               </div>
+            </div>
+          <% } %>
+        <% } %>
+        <!-- <div class="index__block-1">
              <img class="index__block-1-img" src="/img/news/1.png">
              <div>
              <div class=index__block-1-h1>
@@ -50,7 +60,7 @@
                            для определения в дом-интернат, об устранении аварийной ситуации, улучшении санитарных
                            условий, оказании социальной и гуманитарной помощи и другие.
                            </div> </div>
-        </div>
-        <img class="index__block-page" src="/img/news/21.png">
+        </div> -->
+        <!-- <img class="index__block-page" src="/img/news/21.png"> -->
     </div>
 </index>

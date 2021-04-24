@@ -2,7 +2,7 @@
 	--footer-height: 127px;
 	height: var(--footer-height);
 	width: 100%;
-	position: absolute;
+	margin-top: 20px;
 	background-color: var(--color-3);
 	&__container{
 		height: 100%;

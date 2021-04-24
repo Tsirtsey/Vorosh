@@ -6,7 +6,7 @@
 			background: #3a4853;
 			color: #efefef;
 			&>li{
-				&>a{
+				&>a,&>p{
 					padding-left: 20px;
 					width: 100%;
 				}
@@ -22,7 +22,7 @@
 			height: 47px;
 		    display: flex;
 		    position: relative;
-		    &>a{
+		    &>a,&>p{
 		    	align-items: center;
     			display: flex;
 		    }
@@ -41,7 +41,7 @@
 			    	color: #0f4a72;
 			    }
 			}
-			&>a{
+			&>a,&>p{
 				margin-left: 20px;
 				position: relative;
 				padding-left: 40px;

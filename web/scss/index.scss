@@ -195,48 +195,29 @@
 .index{
 	&__block{
 		width: 800px;
-		height: 937px;
-		left: 320px;
-		top: 192px;
+		min-height: 937px;
+		margin: auto;
 		&-page{
 			margin-top: 20px;
 			margin-left: 76%;
 		}
 		&-1{
-			margin-left: 33%;
 			margin-top: 20px;
+			padding: 13px;
 			width: 800px;
-			height: 250px;
-			left: 320px;
-			top: 192px;
-
 			background: #FFFFFF;
 			border-radius: 15px;
 			display: flex;
-
 			&-img{
-				margin-left: 13px;
-				margin-block: 13px;
-				height: 90%;
+				width: 310px;
+				margin-right: 13px;
+			    object-fit: contain;
+			    object-position: top;
 			}
-			&-h1{
-				margin-left: 10px;
-				margin-top: 10px;
-				font-style: normal;
-				font-weight: 500;
-				font-size: 18px;
-				line-height: 22px;
-				text-transform: uppercase;
-
-				color: #000000;
-			}
-			&-h2{
-				margin-left: 10px;
-				margin-right: 10px;
-				margin-top: 5px;
+			&-text{
 				font-style: normal;
 				font-weight: 300;
-				font-size: 12px;
+				font-size: 14px;
 				line-height: 18px;
 				color: #000000;
 			}

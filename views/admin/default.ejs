@@ -13,9 +13,9 @@
 		<%- include('./templates/login') %>
 	<% }else{ %>
 	<section class="header">
-		<div class="header__my-site">
+		<a href="/admin" class="header__my-site">
 			<img src="/img/admin-logo.png" alt="logo">
-		</div>
+		</a>
 		<div class="header__title">
 			Админ панель
 		</div>
@@ -26,12 +26,11 @@
 	<section class="sidebar">
 		<ul class="sidebar__list">
 			<li class="active">
-				<a href="/admin"><i class="icon icon_news"></i>Новости</a> 
+				<p><i class="icon icon_news"></i>Новости</p> 
 				<i class="icon icon_downarrow drop--btn" data-drop-id="323"></i>
 			</li>
 			<ul class="drop--list" data-drop-id="323" style="display: none;">
-				<li><a href="#">Добавить новость</a></li>
-				<li><a href="#">Все новости</a></li>
+				<li><a href="/admin/news">Все новости</a></li>
 			</ul>
 			<li>
 				<a href="/admin/users"><i class="icon icon_feedback"></i>Обратная связь</a>

@@ -1,3 +1,4 @@
+const Addiction 	= require("./Addiction.js");
 const defineRole	= require("./defineRole.js");
 const login			= require("./login.js");
 const parseNews		= require("./parseNews.js");
@@ -24,9 +25,13 @@ module.exports = {
 
 	actionGetNews: (req,res) => {
 		isAdmin(req,()=>{
-			res.render("admin/default",{
-				page: { link: "news" }
-			}); 
+			Addiction.DB.query("SELECT * FROM `news`;",(err, response, meta)=>{
+				res.render("admin/default",{
+			    	page:{
+			    		link:"news", news: response
+			    	}
+			    });
+			})
 		})
 	},
 
