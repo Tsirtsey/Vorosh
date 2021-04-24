@@ -1,0 +1,54 @@
+<h1>Обратная связь</h1>
+<br>
+<table border="1px solid #000">
+	<tr>
+		<td style="padding: 10px;text-align: center;vertical-align: middle;">
+			id
+		</td>
+		<td style="padding: 10px;">
+			fio
+		</td>
+		<td style="padding: 10px;">
+			address 
+		</td>
+		<td style="padding: 10px;">
+			email
+		</td>
+		<td style="padding: 10px;">
+			tel
+		</td>
+		<td style="padding: 10px;">
+			theme
+		</td>
+		<td style="padding: 10px;">
+			text
+		</td>
+	</tr>
+<% if(page.feedback){ %>
+  <%  for(let i = 0; i < page.feedback.length; i++){ %>
+    <tr>
+    	<td style="padding: 10px;text-align: center;vertical-align: middle;">
+			<%- page.feedback[i].id %>
+		</td>
+    	<td style="padding: 10px;">
+			<%- page.feedback[i].fio %>
+		</td>
+		<td style="padding: 10px;">
+			<%- page.feedback[i].address %>
+		</td>
+		<td style="padding: 10px;">
+			<%- page.feedback[i].email %>
+		</td>
+		<td style="padding: 10px;">
+			<%- page.feedback[i].tel %>
+		</td>
+		<td style="padding: 10px;">
+			<%- page.feedback[i].theme %>
+		</td>
+		<td style="padding: 10px;">
+			<%- page.feedback[i].text %>
+		</td>
+	</tr>
+  <% } %>
+<% } %>
+</table>

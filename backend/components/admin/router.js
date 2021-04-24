@@ -14,6 +14,10 @@ router.post('/news',(req,res)=>{
 	ControllerAdmin.actionPostNews(req,res);
 });
 
+router.get('/feedback',(req,res)=>{
+	ControllerAdmin.actionGetFeedback(req,res);
+});
+
 router.get('/login',(req,res)=>{
 	ControllerAdmin.actionGetLogin(req,res);
 });

@@ -31,13 +31,13 @@
              </div>
 
              <div class="feed_block-form">
-                <form class="page6__wrap-block">
-                        <input class="page6__wrap-block-call-one" type="text" size="12" placeholder="Укажите ваше ФИО">
-                        <input class="page6__wrap-block-call-two" type="text" size="15" placeholder="Укажите ваше место жительства">
-                        <input class="page6__wrap-block-call-three" type="text" size="15" placeholder="Укажите ваш E-mail">
-                        <input class="page6__wrap-block-call-four" type="text" size="15" placeholder="Укажите ваш номер телефона">
-                        <input class="page6__wrap-block-call-five" type="text" size="15" placeholder="Укажите тему вашего обращения">
-                        <input class="page6__wrap-block-call-six" type="text" size="15" placeholder="Укажите текст обращения">
+                <form class="page6__wrap-block" action="/feedback" method="POST">
+                        <input class="page6__wrap-block-call-one" name="fio" type="text" size="12" placeholder="Укажите ваше ФИО">
+                        <input class="page6__wrap-block-call-two" name="address" type="text" size="15" placeholder="Укажите ваше место жительства">
+                        <input class="page6__wrap-block-call-three" name="email" type="text" size="15" placeholder="Укажите ваш E-mail">
+                        <input class="page6__wrap-block-call-four" name="tel" type="text" size="15" placeholder="Укажите ваш номер телефона">
+                        <input class="page6__wrap-block-call-five" name="theme" type="text" size="15" placeholder="Укажите тему вашего обращения">
+                        <input class="page6__wrap-block-call-six" name="text" type="text" size="15" placeholder="Укажите текст обращения">
                         <input class="page6__button" type="submit" value="Связаться с нами">
                 </form>
              </div>

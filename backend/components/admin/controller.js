@@ -3,7 +3,7 @@ const defineRole	= require("./defineRole.js");
 const login			= require("./login.js");
 const parseNews		= require("./parseNews.js");
 
-function isAdmin(req, callback){
+function isAdmin(req,res, callback){
 	defineRole(req.session,(role) => {
 		if(role === "admin"){
 			callback();
@@ -16,7 +16,7 @@ function isAdmin(req, callback){
 module.exports = {
 
 	actionGetIndex: (req,res) => {
-		isAdmin(req,()=>{
+		isAdmin(req,res,()=>{
 			res.render("admin/default",{
 				page: { link: "index" }
 			}); 
@@ -24,7 +24,7 @@ module.exports = {
 	},
 
 	actionGetNews: (req,res) => {
-		isAdmin(req,()=>{
+		isAdmin(req,res,()=>{
 			Addiction.DB.query("SELECT * FROM `news`;",(err, response, meta)=>{
 				res.render("admin/default",{
 			    	page:{
@@ -37,6 +37,18 @@ module.exports = {
 
 	actionPostNews: (req,res) => {
 		parseNews(req,res);
+	},
+
+	actionGetFeedback: (req,res) => {
+		isAdmin(req,res,()=>{
+			Addiction.DB.query("SELECT * FROM `feedback`;",(err, response, meta)=>{
+				res.render("admin/default",{
+			    	page:{
+			    		link:"feedback", feedback: response
+			    	}
+			    });
+			})
+		})
 	},
 
 	actionGetLogin: (req,res) => {
