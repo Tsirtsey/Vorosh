@@ -5,7 +5,7 @@ module.exports = (req,res) => {
 		if(!result){
 			res.send(false);
 		}
-		Addiction.DB.query("INSERT INTO `news` (`img`, `title`, `text`) VALUES ('"+result.img+"', '"+result.title+"', '"+result.text+"');",()=>{
+		Addiction.DB.query("INSERT INTO `news` (`img`, `text`) VALUES ('"+result.img+"', '"+result.text+"');",()=>{
 			
 			res.send(true);
 		})
