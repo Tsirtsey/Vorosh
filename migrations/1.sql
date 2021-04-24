@@ -1,6 +1,5 @@
 CREATE TABLE `news` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `img` text DEFAULT NULL,
-  `title` varchar(200) DEFAULT NULL,
   `text` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
