@@ -1,5 +1,5 @@
 CREATE TABLE `news` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `img` text DEFAULT NULL,
   `text` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -7,9 +7,12 @@ CREATE TABLE `news` (
 ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
+ALTER TABLE `news`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
 
 CREATE TABLE `feedback` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `fio` varchar(255) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
@@ -18,7 +21,9 @@ CREATE TABLE `feedback` (
   `text` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-
 ALTER TABLE `feedback`
   ADD PRIMARY KEY (`id`);
 
+ALTER TABLE `feedback`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
